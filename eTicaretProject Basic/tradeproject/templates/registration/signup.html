@@ -1,0 +1,29 @@
+<center>
+    {% extends "base.html" %}
+    {% block content %}
+<div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+    style="background-image: url('https://wallpapercave.com/uwp/uwp1009240.gif');">
+    
+        <form method="POST" action="">
+            <div class="container">
+                <br><br><br><br><br>&emsp;&emsp;&emsp;&emsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
+                    <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                  </svg>
+                <br><br><br>
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="mb-3">
+                    {{field.label_tag}}
+                    {{field}}
+                </div>
+                {% endfor %}
+                &emsp;&emsp;&emsp;&emsp;
+                <button type="submit" class="btn btn-secondary ">Signup</button>
+            </div>
+        </form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+    {% endblock %}
+    </center>
